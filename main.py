@@ -81,12 +81,12 @@ model.add(Activation('linear'))
 dqt = DeepQTrading(
     model=model,
     explorations=[(0.2,100)],
-    trainSize=datetime.timedelta(days=360*5),
-    validationSize=datetime.timedelta(days=30*6),
-    testSize=datetime.timedelta(days=30*6),
+    trainSize=datetime.timedelta(days=360*2),
+    validationSize=datetime.timedelta(days=30*2),
+    testSize=datetime.timedelta(days=30*1),
     outputFile="./Output/csv/walks/walks",
-    begin=datetime.datetime(2001,1,1,0,0,0,0),
-    end=datetime.datetime(2019,2,28,0,0,0,0),
+    begin=datetime.datetime(2016,4,3,0,0,0,0),
+    end=datetime.datetime(2021,12,19,0,0,0,0),
     nbActions=nb_actions,
     isOnlyShort=isOnlyShort,
     ensembleFolderName=sys.argv[3]

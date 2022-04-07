@@ -1,0 +1,13 @@
+import pandas as pd
+df_hour = pd.read_csv('daxHour.csv')
+df_day = pd.read_csv('daxDay.csv')
+df_week = pd.read_csv('daxWeek.csv')
+volume1=[0]*len(df_hour)
+volume2=[0]*len(df_day)
+volume3=[0]*len(df_week)
+df_hour.insert(6, "Volume",volume1, True)
+df_day.insert(6, "Volume",volume2, True)
+df_week.insert(6, "Volume",volume3, True)
+df_hour.to_csv("sp500Hour.csv",index=False)
+df_day.to_csv("sp500Day.csv",index=False)
+df_week.to_csv("sp500Week.csv",index=False)

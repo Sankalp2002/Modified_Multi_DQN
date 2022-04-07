@@ -36,8 +36,7 @@ class MergedDataStructure():
             self.list.append({'Date' : Date[i],'Time' : Time[i], 'Open': Open[i], 'High': High[i], 'Low': Low[i], 'Close': Close[i]})
             
             #Fill the gaps with days that do not exist 
-            dateList = [datetime.datetime.strptime(Date[i+1], "%m/%d/%Y") - datetime.timedelta(days=x) for x in range(0, ( datetime.datetime.strptime(Date[i+1], "%m/%d/%Y")- datetime.datetime.strptime(Date[i], "%m/%d/%Y") ).days )]
-            
+            dateList = [datetime.datetime.strptime(Date[i+1], "%m/%d/%Y") - datetime.timedelta(days=x) for x in range(0, ( datetime.datetime.strptime(Date[i+1], "%m/%d/%Y")- datetime.datetime.strptime(Date[i], "%m/%d/%Y") ).days )]            
             for date in dateList:
                 dateString=date.strftime("%m/%d/%Y")
                 #Contains dates and indexes for the list self.list
@@ -47,5 +46,6 @@ class MergedDataStructure():
         #Converts the date to string
         dateString=str(date)
         #given the date, you get an interval of past days or weeks
-        return self.list[self.dict[dateString]-(self.delta):self.dict[dateString]]
+        testList=self.list[self.dict[dateString]-(self.delta):self.dict[dateString]]
+        return testList
 

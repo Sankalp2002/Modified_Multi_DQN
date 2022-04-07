@@ -126,7 +126,7 @@ class DeepQTrading:
         #walk size is train+validation+test size
         #currentStarting point begins with begin date
         while(self.currentStartingPoint+self.walkSize <= self.endingPoint):
-
+            print("while loop of deepQtrading.py\n")
             #Iteration is the current walk
             iteration+=1
 
