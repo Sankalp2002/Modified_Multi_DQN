@@ -1,16 +1,17 @@
-# Multi-DQN: an Ensemble of Deep Q-Learning Agents for Stock Market Forecasting                                                                                                            
+# Optimized Forex Trading using Ensemble of Deep Q-Learning Agents                                                                                                          
 
 ## Abstract 
 
-The stock market forecasting is one of the most challenging application of machine learning, as its historical data are naturally noisy and unstable. Most of the successful approaches act in a supervised manner, labeling training data as being of positive or negative moments of the market. However, training machine learning classifiers in such a way may suffer from over-fitting, since the market behavior depends on several external factors like other markets trends, political events, etc. In this paper, we aim at minimizing such problems by proposing an ensemble of reinforcement learning approaches which do not use annotations (i.e., market goes up or down) to learn, but rather learn how to maximize a return function over the training stage. In order to achieve this goal, we exploit a Q-learning agent trained several times with the same training data and investigate its ensemble behavior in important real-world stock markets. Experimental results in intraday trading indicate better performance than the conventional Buy-and-Hold strategy, which still behaves well in our setups. We also discuss qualitative and quantitative analyses of these results.
+Foreign exchange market is a fast paced market influenced by a wide variety of factors, which requires the careful study of data to take an advantageous position. There are many AI based approaches, chief among them being the use of single RL agent based systems trained on a specific time period. We have proposed the use of a Deep Q Learning based algorithm consisting of multiple agents trained(run) on different epochs on the dataset. Different feature extraction techniques like CNN, LSTM and their combinations have been tried to ascertain the better technique for our usecase. Decisions taken on each day are logged during validation and testing. An ensembling technique is used on these decisions to get the final decision and profit. It was observed that the combination of CNN and LSTM layers performed better than when each of the layers where tested in isolation from one another, howoever they result in overfitting. LSTM was found to be better overall and using an agreement threshold of 60% provided best results.
 
 ## Authors
 
-- Salvatore Carta
-- Anselmo Ferreira
-- Alessandro Sebastian Podda
-- Diego Reforgiato Recupero
-- Antonio Sanna
+- Bagesh Kumar
+- Ayush Baranwal
+- Aaadharsh Roshan
+- Sahil Sharma
+- Amritansh Mishra
+- O.P. Vyas
 
 # Info 
 
